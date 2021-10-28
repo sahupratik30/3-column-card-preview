@@ -1,0 +1,151 @@
+/* GLOBAL CSS */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+/* CSS VARIABLES */
+:root {
+  /* Colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  /* Fonts */
+  --main-font: "Lexend Deca", sans-serif;
+  --heading-font: "Big Shoulders Display", "cursive";
+}
+/* BODY CSS */
+body {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  background-color: var(--very-light-gray);
+}
+/* MAIN CSS STARTS */
+.card__preview {
+  margin: 2rem 0;
+  max-width: 95%;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.card__preview .card__preview-card {
+  min-height: 35rem;
+  padding: 3rem;
+}
+.sedan {
+  background-color: var(--bright-orange);
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+}
+.sedan button {
+  color: var(--bright-orange);
+}
+.suv {
+  background-color: var(--dark-cyan);
+}
+.suv button {
+  color: var(--dark-cyan);
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+.luxury button {
+  color: var(--very-dark-cyan);
+}
+.card__preview .card__preview-card h1 {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 2.5rem 0;
+  color: var(--transparent-white);
+}
+.card__preview .card__preview-card p {
+  font-family: var(--main-font);
+  line-height: 1.5;
+  color: var(--transparent-white);
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+.card__preview .card__preview-card button {
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  font-family: var(--main-font);
+}
+.card__preview .card__preview-card button:hover {
+  background-color: transparent;
+  border: 0.2rem solid var(--transparent-white);
+  cursor: pointer;
+  color: var(--transparent-white);
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+/* MAIN CSS ENDS */
+
+/* RESPONSIVE CSS STARTS */
+@media screen and (min-width: 900px) {
+  body {
+    justify-content: center;
+    position: relative;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  .card__preview {
+    display: flex;
+    flex-direction: row;
+    height: 50rem;
+    max-height: 70vh;
+    width: 94rem;
+    overflow: hidden;
+  }
+  .card__preview .card__preview-card {
+    position: relative;
+    width: calc(100% / 3);
+    padding: 3.8rem;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+  .card__preview .card__preview-card p {
+    line-height: 2;
+  }
+  .card__preview .card__preview-card button {
+    position: absolute;
+    bottom: 5rem;
+  }
+}
